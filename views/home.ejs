@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+
+
+<h1>Home</h1>
+<p><%= startingContent %></p>
+<ul>
+    <% allPosts.forEach(post =>{ %>
+        <h2> <%= post.title %> </h2>
+        <p> <%= post.story %> <a href="/posts/<%=post.title%>">Read More</a></p>
+    <% }) %>
+
+    <div class="compose">
+        <a href="/compose">
+            <i class="fa-regular fa-pen-to-square fa-bounce fa-2xl" style="color: #183153;"></i>
+        </a>
+    </div>
+</ul>
+
+<%- include("partials/footer"); -%>
